@@ -8,7 +8,3 @@ create table movie
     startTime      varchar(50) NOT NULL
 );
 
---INSERT INTO movies (name, genre, language, ageRestriction, startTime)
---VALUES ('Dune', 'adventure', 'estonian', 12, '2024-03-14 18:00:00');
-       --('Bolt', 'family', 'estonian', 0, '2024-03-14 18:00:00');
-
