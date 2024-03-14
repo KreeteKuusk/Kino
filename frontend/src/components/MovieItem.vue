@@ -34,7 +34,7 @@ export default {
 }
 
 #name {
-  margin-bottom: 15frpx;
+  margin-bottom: 15px;
 }
 
 .movieInfo {
