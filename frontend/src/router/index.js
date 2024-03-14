@@ -8,7 +8,7 @@ const routes = [{
     component: MoviesView
 },
     {
-        path: '/tickets',
+        path: '/tickets/:id',
         name: 'tickets',
         component: TicketsView // Added route for the tickets page
     },

@@ -24,7 +24,7 @@ export default {
   methods: {
     toTickets() {
       // Redirect user to the ticket buying page
-      this.$router.push({ name: 'tickets' });
+      this.$router.push({ name: 'tickets', params: { id: this.movie.id } });
     }
   }
 }
