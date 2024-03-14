@@ -2,11 +2,11 @@
   <div class="movieInfo">
     <h3 id="time">{{ movie.startTime }}</h3>
     <h3 id="name">{{ movie.name }}</h3>
-      <p id="genre">{{ movie.genre }}</p>
-      <p>{{ movie.language }}</p>
-      <!-- if age restriction is anything other than NULL, display age restriction -->
-      <p v-if="movie.ageRestriction">Age restriction: {{ movie.ageRestriction }}</p>
-      <button id="buy">Buy</button>
+    <p id="genre">{{ movie.genre }}</p>
+    <p>{{ movie.language }}</p>
+    <!-- if age restriction is anything other than NULL, display age restriction -->
+    <p v-if="movie.ageRestriction" id="age">Age restriction: {{ movie.ageRestriction }}</p>
+    <button id="buy" @click="toTickets">Buy</button>
   </div>
 </template>
 
@@ -21,12 +21,17 @@ export default {
     return {};
   },
 
-  methods: {}
+  methods: {
+    toTickets() {
+      // Redirect user to the ticket buying page
+      this.$router.push({ name: 'tickets' });
+    }
+  }
 }
 </script>
 
-<style scoped>
 
+<style scoped>
 /* For displaying information about the movies */
 #time, #name {
   align-self: center;
@@ -47,12 +52,18 @@ export default {
   border-radius: 10px;
 }
 
-#genre{
+#genre {
   color: #99a1a6;
 }
 
+#age{
+  align-self: flex-end;
+  font-size: 12px;
+  font-style: italic;
+}
+
 .movieInfo p {
-  margin:0 0 5px 0;
+  margin: 0 0 5px 0;
 }
 
 /* For button */
@@ -62,7 +73,12 @@ export default {
   border-radius: 5px;
   padding: 3px;
   background: #EE6C4D;
-  color: #E0FBFC;
+}
+
+#buy:hover {
+  color: #293241;
+  background: #E0FBFC;
+  cursor: pointer;
 }
 
 </style>

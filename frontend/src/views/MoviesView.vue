@@ -60,7 +60,6 @@ h1{
   gap: 15px;
 
   width: 90%;
-  color: #E0FBFC;
 }
 
 </style>

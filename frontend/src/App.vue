@@ -17,8 +17,10 @@ html{
   background: #293241;
 }
 
-/* For all the text to be the same font (except when defined otherwise) */
+/* For all the text to be the same font and color (except when defined otherwise) */
 *{
   font-family: "Century Gothic",serif;
+  color: #E0FBFC;
+  cursor: default; /* I didn't want the cursor to be "I" over text (i-beam pointer)*/
 }
 </style>
