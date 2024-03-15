@@ -36,6 +36,22 @@
 import Movie from "@/components/MovieItem.vue";
 import axios from 'axios';
 
+/* This function is created by AI and unimplemented right now
+function generateSeats() {
+  let seats = Array(30).fill('0');
+  let takenSeats = 0;
+
+  while (takenSeats < 4) {
+    let seatIndex = Math.floor(Math.random() * 30);
+    if (seats[seatIndex] === '0') {
+      seats[seatIndex] = '1';
+      takenSeats++;
+    }
+  }
+
+  return seats.join('');
+}*/
+
 export default {
   name: "MoviesView",
   components: {
