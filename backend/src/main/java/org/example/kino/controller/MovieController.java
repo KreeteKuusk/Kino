@@ -30,22 +30,6 @@ public class MovieController {
                 .orElseThrow(() -> new Exception("Movie not found with id " + id));
     }
 
-    // for updating a specific movie (seats)
-    @CrossOrigin
-    @PutMapping("/api/movies/{id}")
-    public Movie updateMovie(@PathVariable Integer id, @RequestBody Movie updatedMovie) throws Exception {
-        return movieRepository.findById(id)
-                .map(movie -> {
-                    movie.setName(updatedMovie.getName());
-                    movie.setGenre(updatedMovie.getGenre());
-                    movie.setLanguage(updatedMovie.getLanguage());
-                    movie.setAgeRestriction(updatedMovie.getAgeRestriction());
-                    movie.setStartTime(updatedMovie.getStartTime());
-                    movie.setSeats(updatedMovie.getSeats());
-                    return movieRepository.save(movie);
-                })
-                .orElseThrow(() -> new Exception("Movie not found with id " + id));
-    }
 
 }
 
