@@ -21,8 +21,6 @@ public class Movie {
     private int ageRestriction;
     @Column("STARTTIME")
     private String startTime;
-    @Column("SEATS")
-    private String seats;
 
     public Integer getId() {
         return id;
@@ -70,14 +68,6 @@ public class Movie {
 
     public void setStartTime(String startTime) {
         this.startTime = startTime;
-    }
-
-    public String getSeats() {
-        return seats;
-    }
-
-    public void setSeats(String seats) {
-        this.seats = seats;
     }
 
     @Override
