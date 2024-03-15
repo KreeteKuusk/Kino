@@ -1,6 +1,5 @@
 package org.example.kino;
 
-import org.example.kino.repository.MovieRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;

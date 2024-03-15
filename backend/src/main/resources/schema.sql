@@ -9,3 +9,9 @@ create table movie
     seats          VARCHAR(30) DEFAULT '100000000000001110000010000100'
 );
 
+create table watcher
+(
+    id             Integer primary KEY AUTO_INCREMENT,
+    name           varchar(50) NOT NULL,
+    history        INTEGER ARRAY
+);

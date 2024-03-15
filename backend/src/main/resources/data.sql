@@ -10,3 +10,7 @@ INSERT INTO movie ( name, genre, language, ageRestriction, startTime)
            ('Wish', 'animation', 'estonian', null, '15:30'),
            ('Shrek', 'animation', 'estonian', null, '16:30'),
            ('Mamma Mia!', 'musical', 'english', null, '19:00');
+
+INSERT INTO watcher ( name, history)
+    VALUES('Senna', ARRAY[1,4,5,9,10,11,8,2]);
+
