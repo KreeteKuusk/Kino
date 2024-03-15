@@ -66,7 +66,7 @@ export default {
   margin: 0 0 5px 0;
 }
 
-/* For button */
+/* For buy button */
 #buy {
   margin-top: auto;
   border: none;
