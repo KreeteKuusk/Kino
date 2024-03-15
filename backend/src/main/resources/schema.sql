@@ -5,6 +5,7 @@ create table movie
     genre          varchar(50) NOT NULL,
     language       varchar(50) NOT NULL,
     ageRestriction int,
-    startTime      varchar(50) NOT NULL
+    startTime      varchar(50) NOT NULL,
+    seats          VARCHAR(30) DEFAULT '000000000000000000000000000000'
 );
 
