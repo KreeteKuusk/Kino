@@ -1,6 +1,21 @@
 <template>
-  <h2>for {{movie.name}}</h2>
-  <h2>cinema layout</h2>
+  <div class="container">
+    <div class="info">
+      <h2>For: {{ movie.name }}</h2>
+      <p>{{ movie.startTime }}</p>
+      <p>{{ movie.language }}</p>
+      <!-- Show age restriction when it is not null-->
+      <p v-if="movie.ageRestriction" id="age">Age restriction: {{ movie.ageRestriction }}</p>
+
+      <div class="purchase">
+        <input id="nrOfTickets" @onClick="buyTickets" type="number" value="1" min="1" max="4"/>
+        <button id="buy">Buy</button>
+      </div>
+    </div>
+    <div class="layout">
+      <h2>Cinema layout</h2>
+    </div>
+  </div>
 </template>
 
 
@@ -20,4 +35,57 @@ export default {
 
 
 <style scoped>
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 25px;
+  background: #3D5A80;
+  border-radius: 10px;
+}
+
+.info p, .info h2 {
+  align-self: center;
+}
+
+.purchase {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#nrOfTickets {
+  width: 30px;
+  color: #293241;
+}
+
+#buy {
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  padding: 3px;
+  width: 70px;
+  background: #EE6C4D;
+}
+
+#buy:hover {
+  color: #293241;
+  background: #E0FBFC;
+  cursor: pointer;
+}
+
+.layout{
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  padding: 25px;
+  background: #3D5A80;
+  border-radius: 10px;
+}
 </style>
